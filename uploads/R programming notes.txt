@@ -1,0 +1,235 @@
+
+
+#date = 17-02-2026
+
+#join two lists
+
+there are many ways to join two list together by concatenation ,...
+
+#Matrices
+
+#create a matrix
+this<atrix<- ,matrix(c(1,2,3,4,5), nrow
+
+#access Matix
+access the items by using [] brackets
+1st bracker specifies-> row positin 
+2nd specifies the columns position
+example
+thisMatrix<-
+what is missing is not available , what is not musing is available
+
+#Acces more than one row
+#Acces more than one columns
+
+thismatrix<-matrix(c("apple","banana","cherry","orange","graph","Pinapple","pear","melon","fig",nrow=3,ncol=3))
+
+thismatrix[c(1,2),]
+thismatrix[,c(1,2)]
+
+#Add rows and columns
+
+#add rows and columns
+use the cbind() function to add additional columns in a matrix:
+#print the new matrix
+
+#use the rbind() functionto add additional rows in a matrix:
+
+#Remove  rows and columns , use the c() function to remove rows and columns in a matix:
+= thismatrix <- matrix(c("apple","banana","cherry","orange","graph","Pinapple","pear","melon","fig",nrow=3,ncol=3))
+
+
+#matrix addition use the rbind() or cbind() function to combine two or matrixes together:
+
+#access array items
+-> access the array elements by refering to the index position 
+
+-> aceess the whohle row or columns from a matix in an array, by using the c() function:
+thisarray <- c(1:24)
+
+
+#date = 19-02-2026
+#dataframes
+#create a dataframe  #ppt no 127 start with dataframe
+
+-> dataframes are the data displayed in a format as a table
+-> however each column should have the same data insite it
+-> use the data.frame() function to create a dataframe:
+character, numerical , logical, column wise used
+
+-> #create a dataframe
+Data_Frame<- data.frame(
+Training = c("Strengh","Stamina","other"),
+Pulse = c(100,150,120),
+Duration =c(60,30,45)
+)
+
+#print the dataframe
+Data_Frame
+
+#use the summary() function to summarize the data from a data frame
+
+
+Data_Frame<- data.frame(
+  Training = c("Strengh","Stamina","other"),
+  Pulse = c(100,150,120),
+  Duration =c(60,30,45)
+)
+summary(Data_Frame)
+
+#Access items
+we can use single bracket[], double brakers[[]] or $ to access columns from a data frame:
+
+Data_Frame<- data.frame(
+  Training = c("Milk","coffee","tea"),
+  Pulse = c(100,150,120),
+  Duration =c(60,30,45)
+)
+Data_Frame[1]  #print 1st columns
+Data_Frame[["Traning"]]
+Data_Frame$Training
+
+#add colmns use the cbind() function to add new coluumns in a Data Fame:
+
+#Add  the columns
+
+#remove rows and colmns
+use the c()funcion to remove rows and columns in a data frame:
+
+Data_Frame_New<- Data_Frame[-c(1),-c(1)]
+
+#print the new data frame
+Data_frame_New
+
+
+#combine data frames use the rbind() function to combine row or more ata frames in R vertically
+
+
+
+Data_Frame1<- data.frame(
+  Training = c("Milk","coffee","tea"),
+  Pulse = c(100,150,120),
+  Duration =c(60,30,45)
+)
+
+
+
+Data_Frame2<- data.frame(
+  Training = c("Milk","coffee","tea"),
+  Pulse = c(10,50,20),
+  Duration =c(60,30,45)
+)
+
+New_Data_Frame <-rbind(Data_Frame1,Data_Frame2)
+New_Data_Frame
+
+#use he cbind() function to combine tow or more dta frmes in R horizontally
+
+
+New_Data_Frame <-cbind(Data_Frame1,Data_Frame2)
+New_Data_Frame
+
+#dataframe concept over
+adding the row, adding the column,rmoving the row , removing the columns
+deleting 
+
+
+
+#factors- > is used to categorize the data
+ex- 
+Demograhy:Male/Female
+Music:ROck,PO,Classic,Jazz
+Traning: Stregth, Stamina
+to create the factor use the factor() function and add a vector as argument
+#create a factor
+
+music_genre<-
+
+#plotting -start from 137
+
+24-feb-2026
+
+#plotting
+->the plot function is used to draw the point marker  in a diagram
+->the function takes the parameters 
+parameter 1= x axis
+parameter 2= y axis
+
+plot(1,3)
+to draw more points( use vectors)
+
+
+#multiple points
+make sure u have same number of points in both axis
+plot(c(1,2,3,4,5),c(3,7,8,9,12))
+
+for better organization , when u have many values, it is better to use variables
+example
+x<-c(1,2,3,4,5)
+y<-c(3,7,8,9,12)
+plot(x,y)
+
+#sequence of points
+
+plot(x,y)
+plot(1:10)
+plot(1:10,type="l")
+
+#plot the labels
+
+the plot() function also accepts the other parameters, such as main ,xlab and ylab if u want to customize the graph
+
+plot(1:10,main="My Graph",
+
+#graph appearance
+
+colots
+use col="color" to add a color to the points
+
+plot(1:10,col="red")
+
+#size - default size is 1
+plot(1:10,cex=2)
+
+#point shape
+use pch with a value from 0 to 25 to change the point shape
+
+plot(1:10, pch=25,cex=2)
+range(0,25)
+we can choose upto 26 different types of point shape
+
+#line
+a line graph has a line that connects all the point in a diagam
+
+plot(1:10,type="l",col="blue")
+
+#line width
+to change the width use led parameter (1 is default)
+
+plot(1:10,type="l,lwd=2)
+
+#available parameter values for the lty
+#multiple lines
+
+to display more than one line in a graph , use the plot() function together with the lines() fucntinos
+
+line1<-c(1,2,3,4,5,10)
+line2<-c(2,3,7,8,9,10)
+plot(line1,type="l",col="blue")
+plot(line2,type="l",col="red")
+
+x<-c(5,7,8,2,2,9,4,11,12,9,6)
+y<-c(99,86,87,88,111,103,87,94,78,77,85)
+plot(x,y)
+plot(x,y,main="obeservation of disease",xlab="Car age",ylab="Car speed")
+the x axis shows 
+
+#multiple lines till here the mid terms syllabus slide 150 mid terms
+
+
+
+
+
+
+
+
